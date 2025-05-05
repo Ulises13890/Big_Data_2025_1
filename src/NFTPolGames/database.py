@@ -6,7 +6,7 @@ import pandas as pd
 
 class DataBase:
     def __init__(self):
-        self.db_name = "/src/NFTPolGames/static/csv/matic(pol)_historical.csv"
+        self.db_name = "src/NFTPolGames/static/csv/matic(pol)_historical.csv"
 
         self.create_database()
     
