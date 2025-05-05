@@ -6,7 +6,7 @@ import pandas as pd
 
 class DataBase:
     def __init__(self):
-        self.db_name = "src/edu_bigdata/static/db/dolar_analisis.db" #/workspaces/bigdata_2025_1_2/src/edu_bigdata/static/db
+        self.db_name = "/src/NFTPolGames/static/csv/matic(pol)_historical.csv"
 
         self.create_database()
     
