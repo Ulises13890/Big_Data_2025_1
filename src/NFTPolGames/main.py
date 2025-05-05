@@ -13,7 +13,7 @@ def main():
     print("*************** imprecion de los datos obtenidos ************************")
     print(df.shape)
     print(df.head())
-    df.to_csv("src/edu_bigdata/static/csv/data_web.csv", index=False) #/workspaces/bigdata_2025_1_2/src/edu_bigdata/static/csv
+    df.to_csv("src/NFTPolGames/static/csv/data_web.csv", index=False) #/workspaces/bigdata_2025_1_2/src/edu_bigdata/static/csv
     database.close_database()
 
 
