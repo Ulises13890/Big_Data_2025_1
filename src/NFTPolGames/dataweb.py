@@ -25,18 +25,21 @@ class DataWeb:
             tabla = soup.select_one('div[data-testid="history-table"] table')
             nombre_columnas = [th.get_text(strip=True) for th in tabla.thead.find_all('th')]
             filas = []
+            print(nombre_columnas)
             for tr in tabla.tbody.find_all('tr'):
                 columnas = [ td.get_text(strip=True) for td in tr.find_all('td')]
                 if len(columnas) == len(nombre_columnas):
                     filas.append(columnas)
+
+
             df = pd.DataFrame(filas,columns=nombre_columnas).rename(columns = {
-                'Fecha': 'fecha',
-                'Abrir': 'abrir',
-                'Máx.': 'max',
-                'Mín.': 'min',
-                'CerrarPrecio de cierre ajustado para splits.': 'cerrar',
-                'Cierre ajustadoPrecio de cierre ajustado para splits y distribuciones de dividendos o plusvalías.': 'cierre_ajustado',
-                'Volumen':'volumen'
+                'Date': 'fecha',
+                'Open': 'abrir',
+                'High': 'max',
+                'Low': 'min',
+               'CloseClose price adjusted for splits.': 'cerrar',
+               'Adj CloseAdjusted close price adjusted for splits and dividend and/or capital gain distributions.': 'cierre_ajustado',
+                'Volume':'volumen'
             })
             df = self.convertir_numericos(df)
             #df.to_excel("dataweb_limpio.xlsx")
