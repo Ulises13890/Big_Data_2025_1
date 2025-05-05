@@ -1,0 +1,9 @@
+setup.py
+src/NFTPolGames/database.py
+src/NFTPolGames/dataweb.py
+src/NFTPolGames/main.py
+src/NFTPolGames.egg-info/PKG-INFO
+src/NFTPolGames.egg-info/SOURCES.txt
+src/NFTPolGames.egg-info/dependency_links.txt
+src/NFTPolGames.egg-info/requires.txt
+src/NFTPolGames.egg-info/top_level.txt

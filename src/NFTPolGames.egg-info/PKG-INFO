@@ -1,0 +1,12 @@
+Metadata-Version: 2.2
+Name: NFTPolGames
+Version: 0.0.0
+Author: Udeilor Uscategui
+Author-email: udeilor.uscategui@est.iudigital.edu.co
+Requires-Dist: pandas
+Requires-Dist: openpyxl
+Requires-Dist: requests
+Requires-Dist: BeautifulSoup4
+Dynamic: author
+Dynamic: author-email
+Dynamic: requires-dist
