@@ -9,7 +9,8 @@ class DataBase:
         self.db_name = "src/NFTPolGames/static/db/matic_pol_historical.sqlite"
     
     # CRUD C = create(insert) R= read U = update DF= Delete
-    def insert_data(self,df = pd.DataFrame(),nom_table="matic_analisis"):
+    # CRUD C = create(insert) R= read U = update DF= Delete
+    def insert_data(self,df = pd.DataFrame(),nom_table="dolar_analisis"):
         try:
             df = df.copy()
             conn = sqlite3.connect(self.db_name)
@@ -32,7 +33,7 @@ class DataBase:
             print("error al obtener los datos")
             return df
             
-      def update_data(self, nom_table="", data={}, condition=""):
+    def update_data(self, nom_table="", data={}, condition=""):
         try:
             if len(nom_table) > 0 and len(data) > 0 and len(condition) > 0:
                 conn = sqlite3.connect(self.db_name)
@@ -48,7 +49,7 @@ class DataBase:
                 print("Error: Nombre de tabla, datos a actualizar y condición son obligatorios para la actualización.")
         except Exception as errores:
             print("Error al actualizar los datos:", errores)
-
+    
     def delete_data(self, nom_table="", condition=""):
         try:
             if len(nom_table) > 0 and len(condition) > 0:
