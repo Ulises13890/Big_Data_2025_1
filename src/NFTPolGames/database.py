@@ -6,7 +6,7 @@ import pandas as pd
 
 class DataBase:
     def __init__(self):
-        self.db_name = "src/NFTPolGames/static/db/matic_pol_historical.db"
+        self.db_name = "src/NFTPolGames/static/db/matic_pol_historical.sqllite"
     
     # CRUD C = create(insert) R= read U = update DF= Delete
     def insert_data(self,df = pd.DataFrame(),nom_table="dolar_analisis"):
